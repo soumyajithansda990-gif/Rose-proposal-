@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Rose For You 🌹</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    height: 100vh;
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+
+    background:
+    linear-gradient(#ffd1dc, #fff0f5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #7a2945;
+}
+
+/* Main scene */
+
+.scene {
+
+    width: 100%;
+    max-width: 500px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+/* Cartoon boy */
+
+.boy {
+
+    position: relative;
+
+    width: 120px;
+    height: 170px;
+
+    margin: auto;
+
+    animation: boyMove 2s ease-in-out infinite alternate;
+}
+
+@keyframes boyMove {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-8px);
+    }
+}
+
+/* Head */
+
+.head {
+
+    width: 80px;
+    height: 80px;
+
+    background: #ffd1a9;
+
+    border-radius: 50%;
+
+    margin: auto;
+
+    position: relative;
+
+    border: 3px solid #333;
+}
+
+/* Hair */
+
+.hair {
+
+    position: absolute;
+
+    width: 75px;
+    height: 35px;
+
+    background: #241b1b;
+
+    border-radius: 50% 50% 20% 20%;
+
+    top: -5px;
+    left: 2px;
+}
+
+/* Eyes */
+
+.eye {
+
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    background: #222;
+
+    border-radius: 50%;
+
+    top: 38px;
+}
+
+.eye.left {
+    left: 20px;
+}
+
+.eye.right {
+    right: 20px;
+}
+
+/* Smile */
+
+.mouth {
+
+    position: absolute;
+
+    width: 25px;
+    height: 12px;
+
+    border-bottom: 3px solid #333;
+
+    border-radius: 50%;
+
+    left: 25px;
+    top: 52px;
+}
+
+/* Body */
+
+.body {
+
+    width: 90px;
+    height: 85px;
+
+    background: #4b7bec;
+
+    border-radius: 30px 30px 10px 10px;
+
+    margin: -2px auto;
+
+    border: 3px solid #333;
+
+    position: relative;
+}
+
+/* Arms */
+
+.arm {
+
+    position: absolute;
+
+    width: 70px;
+    height: 18px;
+
+    background: #ffd1a9;
+
+    border: 3px solid #333;
+
+    border-radius: 20px;
+
+    top: 25px;
+}
+
+.arm.left {
+
+    left: -55px;
+
+    transform: rotate(25deg);
+}
+
+.arm.right {
+
+    right: -55px;
+
+    transform: rotate(-25deg);
+}
+
+/* Rose */
+
+.rose {
+
+    position: absolute;
+
+    right: -35px;
+
+    top: 5px;
+
+    font-size: 45px;
+
+    animation: roseMove 1.5s infinite alternate;
+}
+
+@keyframes roseMove {
+
+    from {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+/* Proposal text */
+
+.message {
+
+    margin-top: 25px;
+
+    animation: appear 2s ease;
+
+}
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+
+    font-size: 38px;
+
+    color: #e8436f;
+
+    margin-bottom: 12px;
+}
+
+.message p {
+
+    font-size: 19px;
+
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+
+.buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+button {
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+.yes {
+
+    background: #e8436f;
+
+    color: white;
+}
+
+.yes:hover {
+
+    transform: scale(1.1);
+}
+
+.back {
+
+    background: white;
+
+    color: #e8436f;
+
+    border: 2px solid #e8436f;
+}
+
+/* Floating hearts */
+
+.heart {
+
+    position: absolute;
+
+    bottom: -40px;
+
+    font-size: 25px;
+
+    animation: floatHeart 6s linear infinite;
+
+}
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+        translateY(-110vh)
+        rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="scene">
+
+    <!-- Cartoon Boy -->
+
+    <div class="boy">
+
+        <div class="head">
+
+            <div class="hair"></div>
+
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+
+            <div class="mouth"></div>
+
+        </div>
+
+        <div class="body">
+
+            <div class="arm left"></div>
+
+            <div class="arm right">
+
+                <div class="rose">🌹</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Love Message -->
+
+    <div class="message">
+
+        <h1>For You ❤️</h1>
+
+        <p>
+            I brought you a rose...
+            because you make my world beautiful. 🌹
+        </p>
+
+        <p>
+            Will you be a part of my story? 💕
+        </p>
+
+        <div class="buttons">
+
+            <button class="yes" onclick="sayYes()">
+                Yes ❤️
+            </button>
+
+            <button class="back" onclick="goBack()">
+                ← Back
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* Yes button */
+
+function sayYes() {
+
+    alert(
+        "You just made my heart smile! ❤️🌹"
+    );
+
+}
+
+/* Back button */
+
+function goBack() {
+
+    window.location.href =
+        "index.html";
+
+}
+
+
+/* Floating hearts */
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML =
+        Math.random() > 0.5
+        ? "❤️"
+        : "💕";
+
+    heart.style.left =
+        Math.random() * 100 + "%";
+
+    heart.style.animationDuration =
+        (4 + Math.random() * 4) + "s";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 25) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    }, 8000);
+
+}
+
+setInterval(createHeart, 500);
+
+</script>
+
+</body>
+
+</html>
